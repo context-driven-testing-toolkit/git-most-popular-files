@@ -17,6 +17,9 @@ pushd "$1" > /dev/null
 git log --date-order --since="-$2days ago" --format="% " --numstat . | \
     cut -f 3 | \
     egrep -v '^$' | \
-    sort | uniq -c | sort -rn
+    sort \
+    | uniq -c \
+    | sort -rn \
+    | column -t | perl -pwe 's{\s+}{\t}' # convert output to TSV
 
 popd > /dev/null
