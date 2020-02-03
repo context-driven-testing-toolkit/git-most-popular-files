@@ -28,4 +28,4 @@ a file had within the specified time period.
 
 ```
 
-Note that the output is TSV and thus can be imported directly into Excel or Google Sheets for further exploration and visualiztion.
+Note that the output is TSV and thus can be imported directly into Excel or Google Sheets for further exploration and visualization.
