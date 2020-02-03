@@ -4,8 +4,10 @@ A Git command that shows a simple leaderboard of files that have seen the most c
 
 ## Use It Like This
 
+The following command would inspect the git repo at `~/my_git_repo` over the past 1000 days.
+
 ```
-git_most_popular_files . 1000 | head
+git_most_popular_files "~/my_git_repo" 1000 | head
 ```
 
 Then the output should look something like this, 
@@ -25,3 +27,5 @@ a file had within the specified time period.
 9   .gitignore
 
 ```
+
+Note that the output is TSV and thus can be imported directly into Excel or Google Sheets for further exploration and visualiztion.
