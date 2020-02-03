@@ -8,11 +8,11 @@ Files ranked according to Git commits-per-file.
 Usage:
     `basename $0` <path> <days ago>
 
-eg: `basename $0`  ./repo/ 7"
+eg: `basename $0`  ./repo 7"
   exit 1
 fi
 
-pushd $1 > /dev/null
+pushd "$1" > /dev/null
 
 git log --date-order --since="-$2days ago" --format="% " --numstat . | \
     cut -f 3 | \
