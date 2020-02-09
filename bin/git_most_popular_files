@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 
-if [ -z "$1" ] || [ -z "$2" ]
+set -Eaeuo pipefail
+
+if [ -z "${1-}" ] || [ -z "${2-}" ]
 then
   echo "
 Files ranked according to Git commits-per-file.
